@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+        *{
+            font-family: "Century Gothic";
+        }
+        .rectangle{
+            width: 6vw;
+            height: 100vh;
+            margin-top: 58px;
+            background: #469FD1;
+            position: fixed;    
+            left: 0;
+        }
+        .Logo{
+            border-radius: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        .links-container{
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+        .links-container a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-weight: 600;
+            padding: 20px;
+        }
+
+        .links-container a:hover{
+            color: #469FD1;
+        }
+        .login{
+            position: fixed;
+            right: 0;
+            top: 20px;
+            border-radius: 20px;
+            color: white;
+            background-color: #469FD1;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: 600;
+            border: 1px solid #469FD1;
+            cursor: pointer;
+        }
+        .login:hover{
+            background-color: white;
+            color: #469FD1;
+            border: 1px solid #469FD1;
+        }
+        nav svg{
+            fill: #0f1016;
+        }
+        #sidebar-active{
+            display: none;
+        }
+        .open-sidebar-button, .close-sidebar-button{
+            display: none;
+        }
+        @media (max-width: 660px) {
+            .links-container{
+                flex-direction: column;
+                align-items: flex-start;
+            
+                position: fixed;
+                top: 0;
+                right: -100%;
+                z-index: 10;
+                width: 300px;
+            
+                box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+                background-color: white;
+                transition: 0.75s ease-out;
+            }
+            nav a{
+                box-sizing: border-box;
+                height: auto;
+                width: 100%;
+                padding: 20px 30px;
+                justify-content: flex-end;
+            }
+            .open-sidebar-button, .close-sidebar-button{
+                padding: 20px; 
+                display: block;
+            }
+            .open-sidebar-button{
+                position: fixed;
+                right: 0;
+                top: 50px;
+            }
+            #sidebar-active:checked ~ .links-container{
+                right: 0;
+            }
+            #sidebar-active:checked ~ #overlay{
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 9;
+            }
+        }
+        video{
+            width: 70%;
+            margin-left: 15%;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 500px) {
+            video{
+                width: 80%;
+                margin-left: 13%;
+                margin-top: 30%;
+            }
+        }
+        @media (max-width: 1000px) {
+            video{
+                width: 80%;
+                margin-left: 13%;
+                margin-top: 15%;
+            }
+        }
+        @media (max-width: 1024px) {
+            video{
+                width: 80%;
+                margin-left: 13%;
+                margin-top: 5%;
+            }
+        }
+    </style>    
+    <div class="rectangle"></div>
+    <a href="../Home/index.html"><img class="Logo" src="../image/H-Bionic Logo Design-01.jpg"></a>
+    <nav>
+        <!-- to handel the navbar when the secren is decresing in size -->
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            <a href="./index.html">Home</a> 
+            <a href="../About/Abuot.html">About</a> 
+            <a href="../Market/Products.php">Products</a>
+            <a href="../ChatBot/ChatBot.html">Contact US</a>
+        </div>
+        <a href="../Login/Login.php"><button class="login">Login</button></a>
+    </nav>
+    <!-- insert a vidio in the website -->
+    <video controls src="../image/video_2024-05-07_21-35-50.mp4"></video>
+</body>
+</html>
+
+
+
+
+

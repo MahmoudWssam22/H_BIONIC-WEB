@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+*{
+    font-family: "Century Gothic";
+}
+.rectangle{
+    width: 6vw;
+    height: 100vh;
+    margin-top: 58px;
+    background: #469FD1;
+    position: fixed;    
+    left: 0;
+}
+.Logo{
+    border-radius: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.links-container{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.links-container a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.links-container a:hover{
+    color: #469FD1;
+}
+nav svg{
+    fill: #0f1016;
+}
+#sidebar-active{
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+@media (max-width: 660px) {
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+    
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+    
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+        background-color: white;
+        transition: 0.75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-end;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+        padding: 20px; 
+        display: block;
+    }
+    .open-sidebar-button{
+        position: fixed;
+        right: 0;
+        top: 50px;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
+aside img{
+    display: flex;
+    flex-direction: row;
+    margin-left: 900px;
+    width: 250px;
+    height: 450px;
+    bottom: 0;
+    position:absolute;
+}
+.main{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 40%;
+    left: 15%;
+    padding-top: 50px;
+}
+.Sing{
+    width: 400px;
+    height: 50px;
+    margin-top: 5%;
+    margin-left: 18%;
+    border-radius: 33px;
+    background: #F8EDDD;
+    font-size:20px;
+    justify-content: space-between;
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    text-decoration: none;
+}
+.Log{
+    width: 150px;
+    height: 25px;
+    color: #9E896A;
+} 
+.Reg{
+    width: 200px;
+    height: 30px;
+    border-radius: 33px;
+    background: #469FD1;
+    color: white;
+}
+.Sing label{
+    font-size:20px;
+    justify-content: center;
+    display: flex;
+    margin:auto;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;    
+    list-style-type:none;
+    text-decoration: none;
+}
+.Sing label a{
+    text-decoration: none;
+    color: #000000;
+}
+.Sing label a:hover{
+    color: #ffffff;
+}
+.Register{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+input{
+    width: 100%;
+    height: 35px;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: #469FD1;
+}
+.btn-sing-Reg{
+    width: 230px;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #7C838A;
+    margin-top: 2%;
+    font-size: small;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.OR{
+    color: #B0BAC3;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.btn-sing-Log{
+    width: 200px;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid #7C838A;
+    margin-top: 2%;
+    font-size: small;
+    margin-left: 20px;
+    cursor: pointer;
+    
+}
+.btn-Reg{
+    width: 230px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+    background: #469FD1;
+    cursor: pointer;
+    color: white;
+    margin-top: 2%;
+    font-family: Poppins;
+    font-size: 20px;
+}
+.btn-Reg:hover{
+    background: #00a2ff;
+    color: white;
+}
+.btn-sing-Log:hover{
+    background: #00a2ff;
+}
+@media (min-width: 350px) {
+    .rectangle{
+        width: 9vw;
+        top: 0;
+    }
+    aside img{
+        display: none;
+    }
+    .Sing{
+        width: 250px;
+        height: 50px;
+        margin-top: 40%;
+        margin-left: 18%;
+    }
+    .Log{
+        width: 100px;
+        height: 30px;
+        margin-left: 10px;
+    }
+    .Reg{
+        width: 100px;
+        height: 25px;
+        margin-left: 10px;
+    }
+    .main{
+        margin-top: 5%;
+        width: 250px;
+        height: 200px;
+        margin-left: 15px;
+    }
+    input{
+        width: 100%;
+        height: 10px;
+
+    }
+    .btn-Reg{
+        margin-left: 20px;
+    }
+    .btn-sing-Reg{
+        width: 230px;
+        height: 35px;
+        margin-top: 5px; 
+    }
+}
+@media (min-width: 540px){
+    .rectangle{
+        width: 8vw;
+    }
+    aside img{
+        display: none;
+    }
+    .Sing{
+        width: 350px;
+        height: 50px;
+        margin-top: 30%;
+        margin-left: 18%;
+    }
+    .Log{
+        width: 150px;
+        height: 40px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .Reg{
+        width: 150px;
+        height: 35px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .main{
+        margin-top: 0;
+        width: 400px;
+        height: 200px;
+        margin-left: 15px;
+    }
+    input{
+        width: 100%;
+        height: 10px;
+
+    }
+    .btn-Reg{
+        margin-left: 20px;
+        width: 400px;
+    }
+    .btn-sing-Reg{
+        width: 400px;
+        height: 35px;
+        margin-top: 5px; 
+    }
+}
+@media (min-width: 768px){
+    .rectangle{
+        width: 7vw;
+        top: 0;
+    }
+    aside img{
+        position:absolute;
+        display: flex;
+        flex-direction: row;
+        margin-left: 530px;
+        width: 250px;
+        height: 400px;
+        top:150px;
+    }
+    .Sing{
+        width: 350px;
+        height: 50px;
+        margin-top: 10%;
+        margin-left: 18%;
+    }
+    .Log{
+        width: 150px;
+        height: 40px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .Reg{
+        width: 150px;
+        height: 35px;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .main{
+        margin-top: 0;
+        width: 400px;
+        height: 200px;
+        margin-left: 15px;
+    }
+    input{
+        width: 100%;
+        height: 10px;
+
+    }
+    .btn-Reg{
+        margin-left: 20px;
+        width: 400px;
+    }
+    .btn-sing-Reg{
+        width: 400px;
+        height: 35px;
+        margin-top: 5px; 
+    }
+}
+@media (min-width: 853px) {
+    .rectangle{
+        width: 8vw;
+    }
+    aside img{
+        display: flex;
+        margin-left: 600px;
+        width: 250px;
+        height: 400px;
+        top:150px;
+    }
+}
+@media (min-width: 1000px) {
+    .rectangle{
+        width: 6vw;
+    }
+    aside img{
+        display: flex;
+        margin-left: 800px;
+        width: 250px;
+        height: 450px;
+        bottom: 0;
+    }
+}
